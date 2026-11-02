@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIVORA — A luxurious pause, just for you.</title>
+<link rel="icon" href="img/logo-monogram.png">
+<link rel="stylesheet" href="vivora.css">
+<style>
+  /* Trio photo is landscape: show all three bottles instead of cropping */
+  .hero-media.trio{background:linear-gradient(180deg,#f7f2ea 0%,#ece3d8 100%);display:flex;align-items:center}
+  .hero-media.trio img{height:auto;object-fit:contain}
+  .hero-media.trio .script{color:var(--ink);text-shadow:none;bottom:7%}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="VIVORA_Homepage.html" aria-label="VIVORA home"><img src="img/logo-wordmark.png" alt="VIVORA"></a>
+  <nav class="navlinks" aria-label="Main">
+    <a href="#shop">Shop</a>
+    <a href="VIVORA_OurStory.html">Our story</a>
+    <a href="#ritual">The VIVORA Ritual</a>
+  </nav>
+  <div class="navright"><span>IN</span><button class="cart" aria-label="Bag">Bag<span>0</span></button></div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-copy">
+      <div>
+        <p class="kicker">Luxurious body care · Beautiful aromas · Everyday rituals</p>
+        <h1>A luxurious pause, <em>just for you!</em></h1>
+        <p class="hero-sub">For the woman who does it all, here's a moment that's entirely hers. Discover luxurious body washes, beautiful fragrances and everyday rituals that make caring for yourself the best part of your day.</p>
+        <a class="cta" href="#shop">Discover VIVORA <span>→</span></a>
+      </div>
+      <p class="hero-foot">Your moment. Your ritual. Your VIVORA.</p>
+    </div>
+    <div class="hero-media trio">
+      <img src="img/trio.jpg" alt="Ciao Bella, Kyoto Moon and Seoul Silk perfumed body washes side by side">
+      <span class="script">ciao, bella.</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>A moment that's all yours.</span><span>Beauty in the everyday.</span><span>Take a breath, it's your time.</span><span>Feel good in your own skin.</span>
+      <span>A moment that's all yours.</span><span>Beauty in the everyday.</span><span>Take a breath, it's your time.</span><span>Feel good in your own skin.</span>
+    </div>
+  </div>
+
+  <section class="intro" id="ritual" aria-label="The VIVORA way">
+    <p class="kicker">01 / The VIVORA way</p>
+    <div class="reveal">
+      <h2>Because you deserve a <em>moment, too.</em></h2>
+      <p>Your days are filled with a thousand little things. People to care for, responsibilities to meet and moments that ask for your attention. Somewhere in between, there's you.</p>
+      <p>VIVORA was created to make space for that too-often-forgotten moment of self-care. A warm shower. A beautiful aroma. A luxurious lather that invites you to slow down, breathe deeply and reconnect with yourself. Because self-care shouldn't feel like another thing on your list. It should be something you look forward to.</p>
+    </div>
+  </section>
+
+  <section class="shop" id="shop" aria-label="What's your VIVORA">
+    <div class="shop-head">
+      <h2>What's Your <em>VIVORA</em></h2>
+      <p>Three distinctive aromas. Three different moods. One beautiful ritual.</p>
+    </div>
+    <div class="cards">
+      <article class="card ciao reveal">
+        <div class="card-top"><span>01 — Italy</span><span>Pear · Peony · Amber Musk</span></div>
+        <div class="card-img"><img src="img/ciao-bella-still.jpg" alt="Ciao Bella body wash with pears, peony and ylang-ylang" loading="lazy"></div>
+        <h3>Ciao<br>Bella</h3>
+        <div class="card-foot"><a class="link" href="#">Discover Ciao Bella →</a><span class="mood">Playful. Romantic.<br>Effortlessly charming.</span></div>
+      </article>
+      <article class="card kyoto reveal">
+        <div class="card-top"><span>02 — Japan</span><span>Bergamot · Jasmine · Clean Woods</span></div>
+        <div class="card-img"><img src="img/kyoto-moon-still.jpg" alt="Kyoto Moon body wash with bergamot and jasmine" loading="lazy"></div>
+        <h3>Kyoto<br>Moon</h3>
+        <div class="card-foot"><a class="link" href="#">Discover Kyoto Moon →</a><span class="mood">Fresh. Serene.<br>Effortlessly elegant.</span></div>
+      </article>
+      <article class="card seoul reveal">
+        <div class="card-top"><span>03 — Korea</span><span>Rose · Lychee · Cashmere Musk</span></div>
+        <div class="card-img"><img src="img/seoul-silk-still.jpg" alt="Seoul Silk body wash with lychee and roses" loading="lazy"></div>
+        <h3>Seoul<br>Silk</h3>
+        <div class="card-foot"><a class="link" href="#">Discover Seoul Silk →</a><span class="mood">Soft. Sensual.<br>Irresistibly beautiful.</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="split" id="story" aria-label="Our story">
+    <div class="split-img reveal"><img src="img/kyoto-moon-flatlay.jpg" alt="Kyoto Moon bottle with jasmine and bergamot arranged between label halves" loading="lazy"></div>
+    <div class="reveal">
+      <p class="kicker">02 / Our story</p>
+      <h2>And somewhere between everything, <em>there's you.</em></h2>
+      <p>In a world that constantly asks for more of you, we believe in making space for yourself.</p>
+      <p>VIVORA was born from a simple thought: what if the everyday moments you barely notice became the ones you looked forward to most?</p>
+      <p>A beautiful fragrance. A moment of calm. A feeling of luxury that's entirely yours.</p>
+      <a class="cta" href="VIVORA_OurStory.html">Discover our story <span>→</span></a>
+    </div>
+  </section>
+
+  <section class="closing" aria-label="Closing">
+    <h2 class="reveal">Somewhere between everything, find a moment that <em>feels like you.</em></h2>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand"><img src="img/logo-wordmark-ivory.png" alt="VIVORA"><p>What's your VIVORA?</p></div>
+    <p class="foot-line">Beautiful fragrance. Thoughtful body care. Everyday moments made special.</p>
+    <div class="foot-col"><h4>Shop</h4><a href="#shop">All Products</a><a href="#">Ciao Bella</a><a href="#">Kyoto Moon</a><a href="#">Seoul Silk</a></div>
+    <div class="foot-col"><h4>Discover</h4><a href="VIVORA_OurStory.html">Our Story</a><a href="#ritual">The VIVORA Ritual</a><a href="#">Contact Us</a><a href="#">FAQs</a><a href="#">Shipping &amp; Returns</a></div>
+    <div class="foot-col"><h4>Brand Promise</h4><a href="#">Vegan Body Care</a><a href="#">Not tested on Animals</a><a href="#">SLS-Free Formulations</a><a href="#">Paraben-Free Formulations</a></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 VIVORA</span><span>All rights reserved</span><span>India / Worldwide</span></div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

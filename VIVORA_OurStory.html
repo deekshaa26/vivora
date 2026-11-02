@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Story — VIVORA</title>
+<link rel="icon" href="img/logo-monogram.png">
+<link rel="stylesheet" href="vivora.css">
+<style>
+  /* ---- Our Story page only ---- */
+  .story-hero h1{max-width:620px}
+  .story-hero .hero-media{background:var(--field-peach)}
+
+  /* The day, hour by hour */
+  .day{padding:120px 5vw;border-bottom:1px solid var(--line)}
+  .day-head{display:grid;grid-template-columns:1fr 1.6fr;gap:6vw;margin-bottom:70px}
+  .day-head p{font-size:15px;line-height:1.8;opacity:.82;max-width:520px;margin-top:28px}
+  .timeline{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--ink)}
+  .tick{padding:26px 22px 0 0;border-right:1px solid var(--line);min-height:190px}
+  .tick + .tick{padding-left:22px}
+  .tick:last-child{border-right:0}
+  .tick time{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55}
+  .tick p{font-family:var(--serif);font-size:clamp(20px,1.7vw,26px);line-height:1.2;margin-top:18px}
+  .tick.you{background:var(--ivory);padding-left:22px}
+  .tick.you p{color:var(--rose);font-style:italic}
+
+  /* Pull quote on dark */
+  .pull{background:var(--olive);color:var(--ivory);padding:130px 5vw;display:grid;grid-template-columns:auto 1fr;gap:5vw;align-items:center}
+  .pull img{width:clamp(70px,8vw,120px)}
+  .pull blockquote{font-family:var(--serif);font-size:clamp(32px,4vw,62px);line-height:1.08;max-width:1000px}
+  .pull blockquote em{color:var(--pear-gold)}
+
+  /* Beliefs */
+  .beliefs{padding:120px 5vw;border-bottom:1px solid var(--line)}
+  .beliefs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid var(--line)}
+  .belief{padding:40px 36px 10px 0;border-right:1px solid var(--line)}
+  .belief + .belief{padding-left:36px}
+  .belief:last-child{border-right:0}
+  .belief .num{font-family:var(--serif);font-style:italic;font-size:54px;color:var(--rose);line-height:1}
+  .belief h3{font-size:30px;line-height:1.1;margin:26px 0 16px}
+  .belief p{font-size:14px;line-height:1.8;opacity:.8}
+
+  /* Three places, three moods */
+  .places{padding:120px 5vw;border-bottom:1px solid var(--line)}
+  .place{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+  .place:nth-child(even) .place-img{order:2}
+  .place-img{aspect-ratio:4/5;max-width:440px;width:100%;overflow:hidden;justify-self:center}
+  .place-img img{width:100%;height:100%;object-fit:cover}
+  .place .origin{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+  .place h3{font-size:clamp(48px,5vw,80px);line-height:.92;margin:18px 0 22px}
+  .place .notes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+  .place .notes span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+  .place p{font-size:15px;line-height:1.8;opacity:.82;max-width:440px}
+  .place.ciao h3{color:var(--ink)}   .place.ciao .notes span{background:var(--field-blue)}
+  .place.kyoto h3{color:var(--olive)} .place.kyoto .notes span{background:var(--field-sage)}
+  .place.seoul h3{color:var(--moccaccino)} .place.seoul .notes span{background:var(--field-peach)}
+
+  /* Promise grid */
+  .promise{padding:110px 5vw;background:var(--ivory);border-bottom:1px solid var(--line)}
+  .promise-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .promise-grid div{padding:30px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:center;font-size:13px;letter-spacing:.06em}
+  .promise-grid div::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--moccaccino);flex:none}
+
+  .closing .cta{margin-top:48px}
+
+  @media (max-width:960px){
+    .day-head{grid-template-columns:1fr;gap:0}
+    .timeline{grid-template-columns:1fr}
+    .tick,.tick + .tick{min-height:0;padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}
+    .tick.you{padding:22px 16px}
+    .pull{grid-template-columns:1fr;padding:90px 5vw}
+    .beliefs-grid{grid-template-columns:1fr}
+    .belief,.belief + .belief{padding:34px 0;border-right:0;border-bottom:1px solid var(--line)}
+    .place{grid-template-columns:1fr;gap:36px}
+    .place:nth-child(even) .place-img{order:0}
+    .promise-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:520px){
+    .day,.pull,.beliefs,.places,.promise{padding-left:16px;padding-right:16px}
+    .promise-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="VIVORA_Homepage.html" aria-label="VIVORA home"><img src="img/logo-wordmark.png" alt="VIVORA"></a>
+  <nav class="navlinks" aria-label="Main">
+    <a href="VIVORA_Homepage.html#shop">Shop</a>
+    <a href="VIVORA_OurStory.html" aria-current="page">Our story</a>
+    <a href="VIVORA_Homepage.html#ritual">The VIVORA Ritual</a>
+  </nav>
+  <div class="navright"><span>IN</span><button class="cart" aria-label="Bag">Bag<span>0</span></button></div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero story-hero" aria-label="Our story">
+    <div class="hero-copy">
+      <div>
+        <p class="kicker">Our story</p>
+        <h1>A little moment that's <em>all yours.</em></h1>
+        <p class="hero-sub">For everyone who needs you — and the woman who needs you, too. This is why VIVORA exists.</p>
+        <a class="cta" href="#day">Read our story <span>↓</span></a>
+      </div>
+      <p class="hero-foot">Italy · Japan · Korea — one ritual</p>
+    </div>
+    <div class="hero-media">
+      <img src="img/seoul-silk-roses.jpg" alt="Seoul Silk perfumed body wash surrounded by roses, geranium and lychee">
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>The alarm rings.</span><span>The day begins.</span><span>Somewhere in between, there's you.</span><span>You matter, too.</span>
+      <span>The alarm rings.</span><span>The day begins.</span><span>Somewhere in between, there's you.</span><span>You matter, too.</span>
+    </div>
+  </div>
+
+  <!-- 01 THE DAY -->
+  <section class="day" id="day" aria-label="Where it started">
+    <div class="day-head">
+      <p class="kicker">01 / Where it started</p>
+      <div class="reveal">
+        <h2>The alarm rings. <em>The day begins.</em></h2>
+        <p>Lunches to pack, emails to answer, meetings to attend, children to get ready, meals to plan — and a hundred little things that always find their way onto your list. You move from one to the next, showing up for everyone, holding it all together.</p>
+      </div>
+    </div>
+    <div class="timeline reveal">
+      <div class="tick"><time>6:30 am</time><p>Lunches packed, everyone out the door.</p></div>
+      <div class="tick"><time>10:00 am</time><p>Emails, calls and a meeting that ran long.</p></div>
+      <div class="tick"><time>2:00 pm</time><p>Errands, pick-ups, the list keeps growing.</p></div>
+      <div class="tick"><time>7:30 pm</time><p>Dinner planned, homework checked.</p></div>
+      <div class="tick you"><time>9:45 pm</time><p>And then — a moment for you.</p></div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="pull" aria-label="Our belief">
+    <img src="img/logo-monogram-ivory.png" alt="" aria-hidden="true">
+    <blockquote class="reveal">Caring for yourself shouldn't be another task on your list. It should be the part of your day <em>you look forward to.</em></blockquote>
+  </section>
+
+  <!-- 02 SPLIT -->
+  <section class="split" aria-label="There's you">
+    <div class="split-img reveal"><img src="img/kyoto-moon-flatlay.jpg" alt="Kyoto Moon bottle with jasmine and bergamot" loading="lazy"></div>
+    <div class="reveal">
+      <p class="kicker">02 / Somewhere in between</p>
+      <h2>And somewhere between everything, <em>there's you.</em></h2>
+      <p>The woman who deserves to pause. To breathe. To feel good in her own skin. To have a moment that asks nothing of her.</p>
+      <p>That's where VIVORA comes in. A warm shower. A beautiful fragrance. A luxurious lather that turns an ordinary routine into something worth slowing down for.</p>
+    </div>
+  </section>
+
+  <!-- 03 BELIEFS -->
+  <section class="beliefs" aria-label="What we believe">
+    <p class="kicker">03 / What we believe</p>
+    <h2 class="reveal">Three small things, <em>done beautifully.</em></h2>
+    <div class="beliefs-grid">
+      <div class="belief reveal"><span class="num">i.</span><h3>A pause, not a chore</h3><p>Self-care shouldn't need planning. A few minutes under warm water is enough to leave the world outside and come back to yourself.</p></div>
+      <div class="belief reveal"><span class="num">ii.</span><h3>Fragrance that carries you</h3><p>Each wash is built around a place and a mood, so an everyday shower feels like a short escape rather than a routine.</p></div>
+      <div class="belief reveal"><span class="num">iii.</span><h3>Gentle by design</h3><p>Vegan formulas, free from SLS, parabens and silicones, never tested on animals — luxury you don't have to think twice about.</p></div>
+    </div>
+  </section>
+
+  <!-- 04 PLACES -->
+  <section class="places" aria-label="Three places, three moods">
+    <p class="kicker">04 / Three places, three moods</p>
+    <h2 class="reveal" style="margin-bottom:56px">One ritual, <em>three escapes.</em></h2>
+
+    <article class="place ciao reveal">
+      <div class="place-img"><img src="img/ciao-bella-photo.jpg" alt="Ciao Bella with pears, peony and ylang-ylang" loading="lazy"></div>
+      <div>
+        <p class="origin">01 — Italy</p>
+        <h3>Ciao<br>Bella</h3>
+        <div class="notes"><span>Pear</span><span>Peony</span><span>Amber Musk</span><span>Ylang-Ylang oil</span></div>
+        <p>Playful, romantic and effortlessly charming — for the days that deserve a little sunshine.</p>
+        <a class="cta" href="VIVORA_Homepage.html#shop">Discover Ciao Bella <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="place kyoto reveal">
+      <div class="place-img"><img src="img/kyoto-moon-photo.jpg" alt="Kyoto Moon with bergamot, jasmine and clean woods" loading="lazy"></div>
+      <div>
+        <p class="origin">02 — Japan</p>
+        <h3>Kyoto<br>Moon</h3>
+        <div class="notes"><span>Bergamot</span><span>Jasmine</span><span>Clean Woods</span><span>Skin Musk</span></div>
+        <p>Fresh, serene and effortlessly elegant — a quiet evening in a bottle.</p>
+        <a class="cta" href="VIVORA_Homepage.html#shop">Discover Kyoto Moon <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="place seoul reveal">
+      <div class="place-img"><img src="img/seoul-silk-photo.jpg" alt="Seoul Silk with rose, lychee and geranium" loading="lazy"></div>
+      <div>
+        <p class="origin">03 — Korea</p>
+        <h3>Seoul<br>Silk</h3>
+        <div class="notes"><span>Rose</span><span>Lychee</span><span>Cashmere Musk</span><span>Geranium oil</span></div>
+        <p>Soft, sensual and irresistibly beautiful — when you want to feel wrapped in something lovely.</p>
+        <a class="cta" href="VIVORA_Homepage.html#shop">Discover Seoul Silk <span>→</span></a>
+      </div>
+    </article>
+  </section>
+
+  <!-- PROMISE -->
+  <section class="promise" aria-label="Brand promise">
+    <p class="kicker">05 / Our promise</p>
+    <h2 class="reveal">What goes in, <em>and what never does.</em></h2>
+    <div class="promise-grid reveal">
+      <div>Vegan</div><div>SLS-Free</div><div>Paraben-Free</div><div>Silicone-Free</div>
+      <div>No Synthetic Colours</div><div>No Synthetic Fragrance</div><div>No Animal Testing</div><div>No Harmful Petrochemicals</div>
+    </div>
+  </section>
+
+  <section class="closing" aria-label="Closing">
+    <h2 class="reveal">Just a few minutes to leave the world outside, and remember that <em>you matter, too.</em></h2>
+    <a class="cta" href="VIVORA_Homepage.html#shop">Find your VIVORA <span>→</span></a>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand"><img src="img/logo-wordmark-ivory.png" alt="VIVORA"><p>What's your VIVORA?</p></div>
+    <p class="foot-line">Beautiful fragrance. Thoughtful body care. Everyday moments made special.</p>
+    <div class="foot-col"><h4>Shop</h4><a href="VIVORA_Homepage.html#shop">All Products</a><a href="#">Ciao Bella</a><a href="#">Kyoto Moon</a><a href="#">Seoul Silk</a></div>
+    <div class="foot-col"><h4>Discover</h4><a href="VIVORA_OurStory.html">Our Story</a><a href="VIVORA_Homepage.html#ritual">The VIVORA Ritual</a><a href="#">Contact Us</a><a href="#">FAQs</a><a href="#">Shipping &amp; Returns</a></div>
+    <div class="foot-col"><h4>Brand Promise</h4><a href="#">Vegan Body Care</a><a href="#">Not tested on Animals</a><a href="#">SLS-Free Formulations</a><a href="#">Paraben-Free Formulations</a></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 VIVORA</span><span>All rights reserved</span><span>India / Worldwide</span></div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
